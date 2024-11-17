@@ -3,27 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./css/style.css" rel="stylesheet" />
-    <title>Momentum</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Momentum App</title>
   </head>
   <body>
+    <h1 id="clock">00:00:00</h1>
     <form class="hidden" id="login-form">
-      <input maxlength="15" type="text" placeholder="What is yorr name?" />
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="이름이 무엇인가요?"
+      />
       <input type="submit" value="Log In" />
     </form>
-    <h2 id="clock"></h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" />
-    </form>
-    <div id="weather">
-      <span></span>
-      <span></span>
+    <div class="hidden" id="LoggedIn">
+      <h1 id="greeting"></h1>
+      <div id="quote" class="nanum-pen-script-regular">
+        <span></span>
+        <span></span>
+      </div>
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+      <div id="todo">
+        <h2>할 일 목록</h2>
+        <form id="todo-form">
+          <input
+            type="text"
+            placeholder="할 일을 적고 엔터키를 누르세요 :)"
+            required
+          />
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
     </div>
-    <ul id="todo-list"></ul>
-    <script src="./js/clock.js"></script>
-    <script src="./js/greeting.js"></script>
-    <script src="./js/todo.js"></script>
-    <script src="./js/weather.js"></script>
+
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
